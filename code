@@ -1,0 +1,106 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<stdlib.h>
+void main()
+{
+  int gdriver=DETECT,gmode,errorcode;
+  initgraph(&gdriver,&gmode,"c:\\turboc3\\bgi");
+  errorcode=graphresult();
+  if(errorcode!=grOk)
+  {
+    printf("graphic error:%s\n",grapherrormsg(errorcode));
+    printf("press any key to halt:");
+    getch();
+    exit(1);
+
+  }
+  int x,y,i,j;
+  x=getmaxx();
+  y=getmaxy();
+  setcolor(8);
+//  setbkcolor(1);
+  rectangle(0,0,x,y);
+  setcolor(15);
+ for(i=15;i<x;i=i+80)
+{
+  rectangle(i,0,i+40,40);
+  setfillstyle(1,15);
+  floodfill(i+25,20,15);
+}
+    for(i=20;i<x;i=i+80)
+{
+  rectangle(i,40,i+40,80);
+  setfillstyle(1,15);
+  floodfill(i+20,60,15);
+}
+   for(i=25;i<x;i=i+80)
+{
+  rectangle(i,80,i+40,120);
+  setfillstyle(1,15);
+  floodfill(i+20,100,15);
+}
+   for(i=30;i<x;i=i+80)
+{
+  rectangle(i,120,i+40,160);
+  setfillstyle(1,15);
+  floodfill(i+20,140,15);
+}
+   for(i=25;i<x;i=i+80)
+{
+  rectangle(i,160,i+40,200);
+  setfillstyle(1,15);
+  floodfill(i+20,180,15);
+}
+    for(i=20;i<x;i=i+80)
+{
+  rectangle(i,200,i+40,240);
+  setfillstyle(1,15);
+  floodfill(i+20,220,15);
+}
+ for(i=15;i<x;i=i+80)
+{
+  rectangle(i,240,i+40,280);
+  setfillstyle(1,15);
+  floodfill(i+25,260,15);
+}
+   for(i=20;i<x;i=i+80)
+{
+  rectangle(i,280,i+40,320);
+  setfillstyle(1,15);
+  floodfill(i+20,300,15);
+}
+   for(i=25;i<x;i=i+80)
+{
+  rectangle(i,320,i+40,360);
+  setfillstyle(1,15);
+  floodfill(i+20,340,15);
+}
+    for(i=20;i<x;i=i+80)
+{
+  rectangle(i,360,i+40,400);
+  setfillstyle(1,15);
+  floodfill(i+20,380,15);
+}
+ for(i=15;i<x;i=i+80)
+{
+  rectangle(i,400,i+40,440);
+  setfillstyle(1,15);
+  floodfill(i+25,420,15);
+}
+   for(i=20;i<x;i=i+80)
+{
+  rectangle(i,440,i+40,480);
+  setfillstyle(1,15);
+  floodfill(i+20,460,15);
+}
+
+    for(i=0;i<y;i=i+40)
+  {  setcolor(8);
+     line(0,i,x,i);
+  }
+
+   getch();
+   closegraph();
+}
